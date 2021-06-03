@@ -1,7 +1,7 @@
 module.exports = {
-  // images: {
-  //   domains: ['api.trainaway.fit'],
-  // },
+  images: {
+    domains: ['raw.githubusercontent.com'],
+  },
   future: {
     webpack5: true,
   },

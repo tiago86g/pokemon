@@ -10,6 +10,7 @@ export const PokeCardsList: React.FC<PokeCardsListProps> = ({ pokemonsData }) =>
   const cardList = pokemonsData.map(({ name, url }, index)=>(
     <PokeCard
       id={`${name}${index}`}
+      pokemonId = {index + 1}
       name={name}
       url={url}
     />

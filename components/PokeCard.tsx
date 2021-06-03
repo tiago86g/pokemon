@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/Link'
 import React from 'react'
 import { PokemonType } from '../pages'
@@ -15,7 +16,11 @@ export const PokeCard: React.FC<PokeCardProps> = ({name, url, id, pokemonId}) =>
         <li key={id}>
           <p>{name}</p>
           <p>{url}</p>
-          <p>{id}</p>
+          <Image 
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`} 
+            width={200} 
+            height={200}
+          />
         </li>
       </a>
     </Link>
