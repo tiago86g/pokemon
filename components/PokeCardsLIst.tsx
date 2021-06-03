@@ -2,13 +2,14 @@ import React from 'react'
 import { PokemonType } from '../pages/index'
 import { PokeCard } from './PokeCard'
 
-type PokeCardsLIstProps = {
+type PokeCardsListProps = {
   pokemonsData: PokemonType[]
 }
 
-export const PokeCardsLIst: React.FC<PokeCardsLIstProps> = ({ pokemonsData }) => {
-  const cardList = pokemonsData.map(({ name, url })=>(
+export const PokeCardsList: React.FC<PokeCardsListProps> = ({ pokemonsData }) => {
+  const cardList = pokemonsData.map(({ name, url }, index)=>(
     <PokeCard
+      id={`${name}${index}`}
       name={name}
       url={url}
     />
@@ -16,7 +17,9 @@ export const PokeCardsLIst: React.FC<PokeCardsLIstProps> = ({ pokemonsData }) =>
 
   return (
     <ul>
-      {cardList}
+      {cardList === []
+        ? <p className='text-center'>There is no Pokemon</p>
+        : cardList}    
     </ul>
   )
 }

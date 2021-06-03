@@ -12,14 +12,7 @@ function MyApp ({ Component, pageProps }: AppProps) {
     const { data } = await axios.get(url)
     setPokemonsData(data.results)
   }
-  // const pokemonData = pokemons.map((pokemon, index: number)=>{
-  //   const pokemonId = index + 1
-  //   const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`
-  //   return {
-  //     ...pokemon,
-  //     image
-  //   }
-  // })
+
   useEffect(()=>{
     getAllPokemons(url)
   }, [])

@@ -1,5 +1,5 @@
 import React from 'react'
-import { PokeCardsLIst } from '../components/PokeCardsLIst'
+import { PokeCardsList } from '../components/PokeCardsList'
 
 export type PokemonType = {
   name: string,
@@ -15,7 +15,7 @@ const PokeHome: React.FC<PokeHomeProps> = ({
 }) => {
 
   return <div className={'bg-red-500'}>
-    <PokeCardsLIst pokemonsData={pokemonsData}/>
+    <PokeCardsList pokemonsData={pokemonsData}/>
   </div>
 }
 
