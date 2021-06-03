@@ -29,4 +29,7 @@
 },
 "editor.formatOnSave": true,
 "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+"cSpell.words": [
+    "chartjs"
+],
 }

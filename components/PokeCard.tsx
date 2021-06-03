@@ -11,18 +11,23 @@ type PokeCardProps = {
 }
 export const PokeCard: React.FC<PokeCardProps> = ({name, url, id, pokemonId}) => {
   return (
-    <Link href={`/pokemon?id=${pokemonId}`}>
-      <a>
-        <li key={id}>
-          <p>{name}</p>
-          <p>{url}</p>
-          <Image 
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`} 
-            width={200} 
-            height={200}
-          />
-        </li>
-      </a>
-    </Link>
+    <li key={id}>
+      <Link href={`/pokemon?id=${pokemonId}`}>
+        <a>
+          <div>
+            <p>{name}</p>
+            <p>{url}</p>
+            <Image 
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`} 
+              width={200} 
+              height={200}
+            />
+          </div>
+        </a>
+      </Link>
+      <button>
+        <p>+ add to team</p>
+      </button>
+    </li>
   )
 }

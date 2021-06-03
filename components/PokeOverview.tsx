@@ -1,11 +1,11 @@
 import React from 'react'
 
-type PokemonProp = unknown
+export type SinglePokemonProp = any
 
-export const PokeOverview:React.FC<PokemonProp> = ({pokemon}) => {
+export const PokeOverview:React.FC<SinglePokemonProp> = ({pokemon}) => {
   return (
     <div>
-      
+      <p>{pokemon.forms[0].name}</p>
     </div>
   )
 }
